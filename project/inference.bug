@@ -1,0 +1,11 @@
+model{
+    # likelihood of the data
+    for(i in 1:length(N)){
+        N[i] ~ dpois(lambda);
+    }
+
+    lambda <- const * n_r;
+
+    # prior of the parameters
+    n_r ~ dunif(0, 0.1);
+}

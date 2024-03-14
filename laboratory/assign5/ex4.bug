@@ -1,0 +1,9 @@
+model{
+    # likelihood
+    for(i in 1:length(X)){
+        X[i] ~ dbern(p);
+    }
+
+    # prior for p
+    p ~ dbeta(1, 10)
+}

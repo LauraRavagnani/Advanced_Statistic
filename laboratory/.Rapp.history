@@ -1,0 +1,2 @@
+plot(american$Full.time, american$Month)
+Rscript employees.R
